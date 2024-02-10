@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine?</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fde6c3;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        h1{
+            font-size: clamp(1.5rem, 1.074rem + 2.7936vw, 2rem);
+        }
+
+        .imageContainer {
+         display: grid;
+         place-items: center;
+        }
+        
+        .imageContainer img{
+            mix-blend-mode: darken;
+        }
+
+        .text{
+            margin-top: 2rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 440px) and (min-width:260px){
+            .imageContainer img{
+                width: 350px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <main>
+        <div class="text">
+            <h1>I knew you wouldn't reject me😂.</h1>
+            <h1>So, Wanna go out on a date?💖</h1>
+        </div>
+        <div class="imageContainer">
+            <img src="./image/love-anime-gif-45.gif" alt="Animeted GIF" loading="lazy">
+        </div>
+    </main>
+</body>
+</html>

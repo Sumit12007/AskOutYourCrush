@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be Mine?</title>
+
+  <style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fde6c3;
+    width: 100%;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#invitation {
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {  
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#accept-btn{
+    background-color: #09b409cc;
+}
+
+#reject-btn{
+    position: absolute;
+    background-color: #e43434f6;
+}
+ </style>
+
+</head>
+<body>
+  <main>
+    <section id="invitation">
+        <img id="gif" src="./image/teddy-love.gif" alt="Animeted GIF" loading="lazy">
+        <h1 style="font-size: 2rem;">Will You Be My Valentine?</h1>
+            <button id="accept-btn">Yes</button>
+            <button id="reject-btn">No</button>
+    </section>
+  </main>
+
+ <script>
+    const acceptBtn = document.getElementById('accept-btn');
+    const rejectBtn = document.getElementById('reject-btn');
+
+    acceptBtn.addEventListener('click', () => {
+        window.location.href = 'Confirm.html';
+    });
+
+    rejectBtn.addEventListener('click', () => {
+        moveButton()
+    });
+
+    function moveButton() {
+      const maxX = window.innerWidth - rejectBtn.offsetWidth;
+      const maxY = window.innerHeight - rejectBtn.offsetHeight;
+      const newX = Math.floor(Math.random() * maxX);
+      const newY = Math.floor(Math.random() * maxY);
+      rejectBtn.style.left = `${newX}px`;
+      rejectBtn.style.top = `${newY}px`;
+    }
+
+    moveButton();
+ </script>
+ 
+</body>
+</html>
